@@ -1,0 +1,130 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.navbar-fixed-bottom{
+  background: lightgrey;
+  height:50px;
+}
+
+$break-small: 600px;
+
+.chatbox{
+  display: table;
+  height:auto;
+  margin-bottom: 5px;
+
+  .time{
+    display: table-cell;
+    word-wrap: break-word;
+  }
+  p{
+
+    overflow: auto;
+    background: #7bb32e;
+    border-radius: 20px;
+    padding: 10px 20px;
+
+    @media screen and (max-width: 800px) and (min-width: 700px)  {
+      width: 350px;
+
+    }
+    @media screen and (max-width: $break-small) and (min-width: 330px)  {
+      width: 200px;
+
+    }
+    @media screen and (max-width: 329px) {
+      width: 150px;
+
+    }
+    width: 500px;
+
+
+  }
+  .content{
+    display: inline;
+  }
+
+}
+
+
+#chatlist::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+#chatlist::-webkit-scrollbar
+{
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+#chatlist::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #555;
+}
+
+#chatlist{
+  overflow-y: scroll;
+  height:300px;
+  max-width: 100%;
+  overflow-x: hidden;
+
+}
+
+.chat-add{
+  display:table;
+  .chat-content{
+    display: table-cell;
+    border-bottom-right-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+  }
+  span{
+    display: table-cell;
+  }
+}
+
+
+@media screen and (max-width: $break-small) and (min-width: 330px)  {
+  main{
+        margin-top: 50px !important;
+        margin-bottom: 0px !important;
+	}
+  footer{
+    display: none;
+  }
+  .chat-total{
+    padding-left: 0px;
+    padding-right: 0px;
+    #todo-list{
+      height:400px;
+      #chatlist{
+        height:380px;
+      }
+    }
+  }
+}
+
+#chatlist{
+  .chat{
+    padding-left: 0px !important;
+    list-style-type: none;
+  }
+}
+
+.chat-body{
+  word-wrap: break-word;
+  display: table;
+  strong{
+    color: black;
+    padding: 0px 5px;
+  }
+}
+
+.hide-header{
+   display: none;
+}
+

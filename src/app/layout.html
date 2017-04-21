@@ -1,0 +1,101 @@
+<header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="icon-bg" (click)="press()"><i class="fa fa-fw fa-bars fa-2x"></i></a>-->
+                <a class="navbar-brand" href="#">Hello {{ name }}</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li router-activ>
+                        <a [routerLink]=" ['Index'] ">Home</a>
+
+                    <li *ngIf="isAuthenticate" router-active>
+                        <a [routerLink]=" ['Chat'] " >Chat</a>
+                    </li>
+                    <li *ngIf="isAuthenticate" router-active>
+                        <a [routerLink]=" ['Game'] " >Game</a>
+                    </li>
+                    <li router-active>
+                        <a [routerLink]=" ['About'] ">About</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown" *ngIf="isAuthenticate" [routerLink]=" ['Profile'] ">
+                        <a ><span class="glyphicon glyphicon-user"></span> Profile</a>
+                    </li>
+                    <li *ngIf="!isAuthenticate"><a [routerLink]=" ['Signup'] "><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li *ngIf="!isAuthenticate"><a [routerLink]=" ['Signin'] "><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li *ngIf="isAuthenticate"><a (click)="authService.logout()"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<!--left bar-->
+<!--<div id="wrapper" [ngClass]="{'toggled': check_button}">-->
+
+    <!--&lt;!&ndash; Sidebar &ndash;&gt;-->
+    <!--<div id="sidebar-wrapper">-->
+        <!--<ul class="sidebar-nav">-->
+            <!--<li class="sidebar-brand">-->
+                <!--<a href="#">-->
+                    <!--Start Bootstrap-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">Dashboard</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">Shortcuts</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">Overview</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">Events</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">About</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">Services</a>-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<a href="#">Contact</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; /#sidebar-wrapper &ndash;&gt;-->
+
+    <!--&lt;!&ndash; Page Content &ndash;&gt;-->
+    <!--<div id="page-content-wrapper">-->
+        <!--<div class="container-fluid">-->
+            <!--<div class="row">-->
+                <!--<div class="col-lg-12">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; /#page-content-wrapper &ndash;&gt;-->
+
+<!--</div>-->
+
+
+
+<main style="margin-top: 60px; margin-bottom: 80px">
+    <router-outlet></router-outlet>
+</main>
+
+<footer class="navbar-fixed-bottom">
+    <img [src]="angularLogo" width="40px">
+    Angular 2 by<a [href]="url">@richardyych</a>
+
+</footer>

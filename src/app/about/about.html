@@ -1,0 +1,91 @@
+<div class="container">
+
+    <div>
+        <form class="form-horizontal">
+
+            <!-- Form Name -->
+
+
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="contactname">Original Price</label>
+                <div class="col-md-4">
+                    <input id="contactname" name="contactname" [(ngModel)]="value[0]" type="number" required placeholder="Before tax. e.g. 60000" class="form-control input-md">
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="contactemail">Residual Percentage(%)</label>
+                <div class="col-md-4">
+                    <input id="contactemail" name="contactemail" [(ngModel)]="value[1]" type="number" required placeholder="Input 50 for 50%. e.g. 53" class="form-control input-md" >
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="contactphone">Discount Amount</label>
+                <div class="col-md-4">
+                    <input id="contactphone" #phone name="contactphone" [(ngModel)]="value[2]" type="number" required placeholder="e.g. 5000" class="form-control input-md"  >
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="contactphone">Document fee and Freight</label>
+                <div class="col-md-4">
+                    <input id="type"  #type name="contactphone" [(ngModel)]="value[3]" type="number" required placeholder="e.g. 2000" class="form-control input-md"   >
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="contactphone"> Downpayment</label>
+                <div class="col-md-4">
+                    <input id="type"  #type name="contactphone" [(ngModel)]="value[4]" type="number" required placeholder="e.g. 5000" class="form-control input-md"    >
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="contactphone">Lease Months</label>
+                <div class="col-md-4">
+                    <input id="type"  #type name="contactphone" [(ngModel)]="value[5]" type="number" required placeholder="Input 12 for 12 months. e.g. 48" class="form-control input-md"    >
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="contactphone">Interests(%)</label>
+                <div class="col-md-4">
+                    <input id="type"  #type name="contactphone" [(ngModel)]="value[6]" type="number" required placeholder="e.g. 1.99" class="form-control input-md"    >
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="contactphone">Tax Rate(%)</label>
+                <div class="col-md-4">
+                    <input id="type"  #type name="contactphone" [(ngModel)]="value[7]" type="number" required placeholder="Input 12 for 12%. e.g.12" class="form-control input-md"    >
+
+                </div>
+            </div>
+            <!-- Text input-->
+
+            <!-- Text input-->
+
+
+            <!-- Button (Double) -->
+            <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-8">
+                    <button type="submit" id="Calculate" name="Calculate" class="btn btn-info" (click)="calculate()">Calculate</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+</div>

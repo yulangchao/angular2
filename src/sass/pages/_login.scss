@@ -1,0 +1,14 @@
+.login-form{
+  .form-group{
+    margin: auto;
+    margin-bottom: 10px;
+    width: 350px;
+    @media screen and (max-width: $break-small) and (min-width: 330px)  {
+      width: 250px;
+    }
+
+    button{
+      margin-top:15px;
+    };
+  }
+}

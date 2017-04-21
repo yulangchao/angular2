@@ -1,0 +1,75 @@
+<div class="container">
+
+    <div>
+        <form class="form-horizontal">
+
+            <!-- Form Name -->
+
+
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="contactname">Name</label>
+                <div class="col-md-4">
+                    <input id="contactname" name="contactname" type="text" placeholder="{{profile.name}}" class="form-control input-md" readonly>
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="contactemail">Email</label>
+                <div class="col-md-4">
+                    <input id="contactemail" name="contactemail" type="text" placeholder="{{profile.email}}" class="form-control input-md"  readonly>
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="contactphone">Contact Phone</label>
+                <div class="col-md-4">
+                    <input id="contactphone" #phone name="contactphone" type="text" placeholder="{{profile.phone}}" class="form-control input-md" [(ngModel)]="profile.phone" [readonly]="isReadonly ? true : null" >
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="contactphone">Type</label>
+                <div class="col-md-4">
+                    <input id="type"  #type name="contactphone" type="text" placeholder="{{profile.type}}" class="form-control input-md"  [(ngModel)]="profile.type" [readonly]="isReadonly ? true : null" >
+
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="selectbasic">Select Color</label>
+                <div class="col-md-4">
+                    <select id="selectbasic" [(ngModel)]="profile.logo" #logo name="selectbasic" class="form-control" [disabled]="isReadonly ? true : null">
+                        <option value="0" [selected]="profile.logo == 0">Red</option>
+                        <option value="1" [selected]="profile.logo == 1">Blue</option>
+                        <option value="2" [selected]="profile.logo == 2">Yellow</option>
+                        <option value="3" [selected]="profile.logo == 3">Green</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <!-- Button (Double) -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="save"></label>
+                <div class="col-md-8">
+                    <button id="save" *ngIf="isReadonly" name="edit" (click)="isReadonly= false" class="btn btn-info">Edit</button>
+                    <button id="save" *ngIf="!isReadonly" name="edit" (click)="isReadonly= true;updateProfile();" class="btn btn-info">Save</button>
+                    <button id="cancel" *ngIf="!isReadonly" name="cancel" (click)="reset(phone);reset(type); isReadonly= true;reset1(logo);" class="btn btn-danger">Cancel</button>
+
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+</div>

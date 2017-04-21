@@ -1,0 +1,27 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.icon-bg{
+  i{
+    color:white !important;
+    margin-bottom: 13px;
+    margin-top: 12px !important;
+    float: left;
+  }
+}
+.slide{
+  margin-top: -9px;
+  .slide-part{
+    padding-right: 0px;
+  }
+}
+
+.login-form{
+ 	input{
+		height: 37px;
+	}
+}
+
+
+

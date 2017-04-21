@@ -1,0 +1,8 @@
+    <div text-center>
+      <canvas #myCanvas width="700" height="400" style="background:lightgray;display: block; margin: auto;"></canvas>
+      <div style="display:none">
+        <input type="range" min="1" max="400" [(ngModel)]="rectW" /><br />
+        <input type="range" min="1" max="400" [(ngModel)]="rectH" /><br />
+        <input type="color" [(ngModel)]="rectColor" placeholder="color" value="{{rectColor}}" />
+      </div>
+    </div>
